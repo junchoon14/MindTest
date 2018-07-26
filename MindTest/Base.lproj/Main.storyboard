@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,99 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MindTest" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="走對行，讓妳快樂似神仙" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOC-u1-aOY" userLabel="Question Label">
+                                <rect key="frame" x="35" y="179" width="305" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="5s1-eo-F7U"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="305" id="CLQ-Fy-cA8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最適合妳的職業" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDi-Uw-hVY" userLabel="Question Label">
+                                <rect key="frame" x="71.666666666666686" y="107" width="232" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="232" id="g1v-Db-uys"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="30"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="903-c0-tNn">
+                                <rect key="frame" x="12.666666666666657" y="486" width="350" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZ9-cE-s8s" userLabel="Choice Button 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="U9E-pZ-mWN"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="nhw-Tf-xPe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="開始"/>
+                                        <connections>
+                                            <action selector="firstChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wLV-R2-mkx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcY-aj-myK" userLabel="Choice Button 2">
+                                        <rect key="frame" x="0.0" y="40" width="350" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="Rwx-gK-ubj"/>
+                                            <constraint firstAttribute="height" constant="30" id="ZVD-LE-JwW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <connections>
+                                            <action selector="secondChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b20-7J-71W"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="妳知道嗎？找到一個好工作跟找到好伴侶是同樣重要的一件事，因為將來會遇見什麼樣的人、過什麼樣的生活，都跟「工作」脫不了關係呢！所以接下來的診斷結果，請大家一定要睜大眼睛瞧清楚唷！" translatesAutoresizingMaskIntoConstraints="NO" id="FON-yt-QCn">
+                                <rect key="frame" x="67.666666666666686" y="244" width="240" height="200"/>
+                                <color key="backgroundColor" red="1" green="0.93479605711913516" blue="0.97038367138073511" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="UAT-t5-DqH"/>
+                                    <constraint firstAttribute="width" constant="240" id="pXG-xl-ids"/>
+                                </constraints>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="STSongti-TC-Regular" family="Songti TC" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93939012289047241" green="0.867471446489542" blue="0.89985123236348274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="903-c0-tNn" firstAttribute="top" secondItem="dOC-u1-aOY" secondAttribute="bottom" constant="250" id="28s-yM-oN4"/>
+                            <constraint firstItem="dOC-u1-aOY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8q9-pC-XF6"/>
+                            <constraint firstItem="FON-yt-QCn" firstAttribute="top" secondItem="dOC-u1-aOY" secondAttribute="bottom" constant="8" id="PPH-Or-YRs"/>
+                            <constraint firstItem="903-c0-tNn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cZ4-3M-5ww"/>
+                            <constraint firstItem="FON-yt-QCn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hv9-Sr-vey"/>
+                            <constraint firstItem="dOC-u1-aOY" firstAttribute="top" secondItem="IDi-Uw-hVY" secondAttribute="bottom" constant="30" id="tHO-LU-R2p"/>
+                            <constraint firstItem="IDi-Uw-hVY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vSZ-oS-19f"/>
+                            <constraint firstItem="IDi-Uw-hVY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="vo0-kK-KJe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="choiceButton1" destination="FZ9-cE-s8s" id="i58-VQ-0bO"/>
+                        <outlet property="choiceButton2" destination="zcY-aj-myK" id="2dE-Ay-BHk"/>
+                        <outlet property="questionLabel" destination="FON-yt-QCn" id="UsS-1E-qmY"/>
+                        <outlet property="titleLabel" destination="dOC-u1-aOY" id="vcc-Nb-Zzq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-52" y="129.31034482758622"/>
         </scene>
     </scenes>
 </document>
